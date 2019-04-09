@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modales Fenster</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+</head>
+<body>
+    <header>
+            <nav class="nav">
+                    <a class="nav-link" href="#">Einführung</a>
+                    <a class="nav-link" href="#">Modales Fenster erstellen</a>
+                    <a class="nav-link" href="#">Benutzen</a>
+            </nav>
+    </header>
+    <h1>Modales Fenster</h1>
+    
+    <!-- <div id="ex1" class="modal">
+            <p>Wie Sie gemerkt haben, können Sie mit dem Klick auf "Öffnen" das modale Fenster öffnen. Mit einem Klick auf "Schliessen" oder das Kreuz wird es wieder geschlossen.</p>
+            <p>Sie können auch einfach ausserhalb des Fensters klicken und somit das Fenster schliessen.</p>
+            <a class="modal_close" href="#" rel="modal:close">Schliessen</a>
+          </div>
+          
+          <p><a href="#ex1" rel="modal:open">Öffnen</a></p> -->
+
+<div class="modal">
+    <div class="modal_content">
+    <p class="modal_text">Dies ist ein modales Fenster, welches Sie mit einem Klick auf "Okay" schliessen können.
+        Öffnen können Sie es wieder mit "Öffnen"
+    </p>
+    <p>Hier noch ein Bild, damit es ein bisschen besser aussieht.</p>
+    <img id="meme" src="img/meme.jpeg" alt="Meme">
+    <button class="container modal_close">Okay</button>
+</div>
+</div>
+<button class="modal_open">Öffnen</button>
+
+<h1>Was ist es und für was ist es gut?</h1>
+<p class="normal-text">Als modales Fenster wird jeglicher Inhalt bezeichnet, der vor dem eigentlichen Inhalt der Seite erscheint. Ein solches Fenster muss erst geschlossen werden, bevor der Benutzer
+    mit dem Rest der Seite weiterarbeiten kann.
+</p>
+<p class="normal-text">Die modalen Fenster auf dieser Webseite wurden alle sehr aufwändig und von Null auf erstellt. Es gibt einfachere und bessere Wege, um ein modales Fenster zu erstellen.</p>
+<p class="normal-text">Für modale Fenster können Sie <a href="https://getbootstrap.com/">Bootstrap</a> oder andere Frameworks wie <a href="https://jquerymodal.com/">jQuery Modal</a> verwenden.</p>
+<p class="normal-text">Ich empfehle Ihnen jQuery Modal, da es einfach zu stylen ist. Es braucht auch keine langen Klassen oder IDs.</p>
+<script src="javascript.js"></script>
+</body>
+</html>
