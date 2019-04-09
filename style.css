@@ -93,4 +93,14 @@ body {
   width: 600px;
   margin: 20px auto;
 }
+
+.code {
+  border: 1px solid black;
+  text-align: left;
+  width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #e1f4ff;
+  border-radius: 10px;
+}
 /*# sourceMappingURL=style.css.map */

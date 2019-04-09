@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modales Fenster</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+</head>
+<body>
+    <header>
+            <nav class="nav">
+                    <a class="nav-link" href="index.html">Einführung</a>
+                    <a class="nav-link" href="#">Modales Fenster erstellen</a>
+                    <a class="nav-link" href="use.html">Benutzen</a>
+            </nav>
+    </header>
+    <h1>Modales Fenster erstellen</h1>
+    <p>Wenn Sie ein modales Fenster erstellen wollen, können Sie sich folgenden Code anschauen.</p>
+    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="manuel-rahm" data-slug-hash="ROoOdP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="ROoOdP">
+        <span>See the Pen <a href="https://codepen.io/manuel-rahm/pen/ROoOdP/">
+        ROoOdP</a> by manuel-rahm (<a href="https://codepen.io/manuel-rahm">@manuel-rahm</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p>Dieser Code ist von jQuery Modal.<br/> Um selbst ein modales Fenster zu erstellen, gibt es unten nochmals Code.</p>
+    <div class="code">
+        <h2>HTML</h2>
+        <p>&#x3C;!DOCTYPE html&#x3E;<br/>
+                &#x3C;html lang=&#x22;de&#x22;&#x3E;<br/>
+                &#x3C;head&#x3E;<br/>
+                    &#x3C;link rel=&#x22;shortcut icon&#x22; type=&#x22;image/x-icon&#x22; href=&#x22;favicon.ico&#x22;&#x3E;<br/>
+                    &#x3C;link href=&#x22;style.css&#x22; rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22;&#x3E;<br/>
+                    &#x3C;script src=&#x22;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&#x22;&#x3E;&#x3C;/script&#x3E;<br/>
+                    &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;<br/>
+                    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;<br/>
+                    &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;ie=edge&#x22;&#x3E;<br/>
+                    &#x3C;title&#x3E;Modales Fenster&#x3C;/title&#x3E;<br/>
+                    &#x3C;!-- &#x3C;script src=&#x22;https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js&#x22;&#x3E;&#x3C;/script&#x3E;<br/>
+                    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css&#x22; /&#x3E; --&#x3E;<br/>
+                &#x3C;/head&#x3E;<br/>
+                &#x3C;body&#x3E;<br/>
+                    &#x3C;header&#x3E;<br/>
+                            &#x3C;nav class=&#x22;nav&#x22;&#x3E;<br/>
+                                    &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Einf&#xFC;hrung&#x3C;/a&#x3E;<br/>
+                                    &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;create.html&#x22;&#x3E;Modales Fenster erstellen&#x3C;/a&#x3E;<br/>
+                                    &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Benutzen&#x3C;/a&#x3E;<br/>
+                            &#x3C;/nav&#x3E;<br/>
+                    &#x3C;/header&#x3E;<br/>
+                    &#x3C;h1&#x3E;Modales Fenster&#x3C;/h1&#x3E;<br/>
+                    <br/>
+                    &#x3C;!-- &#x3C;div id=&#x22;ex1&#x22; class=&#x22;modal&#x22;&#x3E;<br/>
+                            &#x3C;p&#x3E;Wie Sie gemerkt haben, k&#xF6;nnen Sie mit dem Klick auf &#x22;&#xD6;ffnen&#x22; das modale Fenster &#xF6;ffnen. Mit einem Klick auf &#x22;Schliessen&#x22; oder das Kreuz wird es wieder geschlossen.&#x3C;/p&#x3E;<br/>
+                            &#x3C;p&#x3E;Sie k&#xF6;nnen auch einfach ausserhalb des Fensters klicken und somit das Fenster schliessen.&#x3C;/p&#x3E;<br/>
+                            &#x3C;a class=&#x22;modal_close&#x22; href=&#x22;#&#x22; rel=&#x22;modal:close&#x22;&#x3E;Schliessen&#x3C;/a&#x3E;<br/>
+                          &#x3C;/div&#x3E;<br/>
+                          <br/>
+                          &#x3C;p&#x3E;&#x3C;a href=&#x22;#ex1&#x22; rel=&#x22;modal:open&#x22;&#x3E;&#xD6;ffnen&#x3C;/a&#x3E;&#x3C;/p&#x3E; --&#x3E;<br/>
+                          <br/>
+                &#x3C;div class=&#x22;modal&#x22;&#x3E;<br/>
+                    &#x3C;div class=&#x22;modal_content&#x22;&#x3E;<br/>
+                    &#x3C;p class=&#x22;modal_text&#x22;&#x3E;Dies ist ein modales Fenster, welches Sie mit einem Klick auf &#x22;Okay&#x22; schliessen k&#xF6;nnen.<br/>
+                        &#xD6;ffnen k&#xF6;nnen Sie es wieder mit &#x22;&#xD6;ffnen&#x22;<br/>
+                    &#x3C;/p&#x3E;<br/>
+                    &#x3C;p&#x3E;Hier noch ein Bild, damit es ein bisschen besser aussieht.&#x3C;/p&#x3E;<br/>
+                    &#x3C;img id=&#x22;meme&#x22; src=&#x22;img/meme.jpeg&#x22; alt=&#x22;Meme&#x22;&#x3E;<br/>
+                    &#x3C;button class=&#x22;container modal_close&#x22;&#x3E;Okay&#x3C;/button&#x3E;<br/>
+                &#x3C;/div&#x3E;<br/>
+                &#x3C;/div&#x3E;<br/>
+                &#x3C;button class=&#x22;modal_open&#x22;&#x3E;&#xD6;ffnen&#x3C;/button&#x3E;<br/>
+                <br/>
+                &#x3C;h1&#x3E;Was ist es und f&#xFC;r was ist es gut?&#x3C;/h1&#x3E;<br/>
+                &#x3C;p class=&#x22;normal-text&#x22;&#x3E;Als modales Fenster wird jeglicher Inhalt bezeichnet, der vor dem eigentlichen Inhalt der Seite erscheint. Ein solches Fenster muss erst geschlossen werden, bevor der Benutzer<br/>
+                    mit dem Rest der Seite weiterarbeiten kann.<br/>
+                &#x3C;/p&#x3E;<br/>
+                &#x3C;p class=&#x22;normal-text&#x22;&#x3E;Die modalen Fenster auf dieser Webseite wurden alle sehr aufw&#xE4;ndig und von Null auf erstellt. Es gibt einfachere und bessere Wege, um ein modales Fenster zu erstellen.&#x3C;/p&#x3E;<br/>
+                &#x3C;p class=&#x22;normal-text&#x22;&#x3E;F&#xFC;r modale Fenster k&#xF6;nnen Sie &#x3C;a href=&#x22;https://getbootstrap.com/&#x22;&#x3E;Bootstrap&#x3C;/a&#x3E; oder andere Frameworks wie &#x3C;a href=&#x22;https://jquerymodal.com/&#x22;&#x3E;jQuery Modal&#x3C;/a&#x3E; verwenden.&#x3C;/p&#x3E;<br/>
+                &#x3C;p class=&#x22;normal-text&#x22;&#x3E;Ich empfehle Ihnen jQuery Modal, da es einfach zu stylen ist. Es braucht auch keine langen Klassen oder IDs.&#x3C;/p&#x3E;<br/>
+                &#x3C;script src=&#x22;javascript.js&#x22;&#x3E;&#x3C;/script&#x3E;<br/>
+                &#x3C;/body&#x3E;<br/>
+                &#x3C;/html&#x3E;</p><br/>
+    </div>
+    <div class="code">
+        <h2>CSS</h2>
+        <p>body {<br/>
+            text-align: center;<br/>
+          }<br/>
+          <br/>
+          .modal {<br/>
+            margin: 0 auto;<br/>
+            display: -webkit-box;<br/>
+            display: -ms-flexbox;<br/>
+            display: flex;<br/>
+            -webkit-box-pack: center;<br/>
+                -ms-flex-pack: center;<br/>
+                    justify-content: center;<br/>
+          }<br/>
+          <br/>
+          .modal_content {<br/>
+            border: 1px solid black;<br/>
+            margin: 0 auto;<br/>
+            border-radius: 6px;<br/>
+            background-color: #000000;<br/>
+            color: white;<br/>
+            margin-top: 100px;<br/>
+            width: 500px;<br/>
+            font-family: 'Libre Franklin', sans-serif;<br/>
+            position: fixed;<br/>
+            top: 100px;<br/>
+          }<br/>
+          <br/>
+          .modal_close {<br/>
+            border-radius: 4px;<br/>
+            border: none;<br/>
+            padding: 5px 15px;<br/>
+            margin-bottom: 15px;<br/>
+            background-color: #8c8c8c;<br/>
+            font-weight: bold;<br/>
+          }<br/>
+          <br/>
+          .modal-text {<br/>
+            width: 300px;<br/>
+            margin: 20px auto;<br/>
+          }<br/>
+          <br/>
+          .modal_open {<br/>
+            border-radius: 4px;<br/>
+            border: none;<br/>
+            background-color: #8c8c8c;<br/>
+            font-weight: bold;<br/>
+            text-align: center;<br/>
+            margin: 10px auto;<br/>
+          }<br/>
+          <br/>
+          .modal_open {<br/>
+            display: none;<br/>
+          }<br/>
+          <br/>
+          .nav {<br/>
+            display: -webkit-box;<br/>
+            display: -ms-flexbox;<br/>
+            display: flex;<br/>
+            -webkit-box-pack: center;<br/>
+                -ms-flex-pack: center;<br/>
+                    justify-content: center;<br/>
+            background-color: #d0d0d0;<br/>
+            padding: 10px;<br/>
+          }<br/>
+          
+          .nav-link {<br/>
+            text-decoration: none;<br/>
+            padding: 10px;<br/>
+            color: black;<br/>
+            font-family: 'Shadows Into Light', cursive;<br/>
+            font-size: 20px;<br/>
+            font-weight: bold;<br/>
+            margin: 0 15px;<br/>
+          }<br/>
+          <br/>
+          .nav-item {<br/>
+            list-style: none;<br/>
+          }<br/>
+          <br/>
+          .navbar-title {<br/>
+            text-decoration: none;<br/>
+          }<br/>
+          <br/>
+          #meme {<br/>
+            width: 300px;<br/>
+            display: block;<br/>
+            margin: 0 auto;<br/>
+            margin-bottom: 10px;<br/>
+          }<br/>
+          <br/>
+          .normal-text {<br/>
+            font-family: 'Libre Franklin', sans-serif;<br/>
+            width: 600px;<br/>
+            margin: 20px auto;<br/>
+          }<br/>
+          <br/>
+          .code {<br/>
+            border: 1px solid black;<br/>
+            text-align: left;<br/>
+            width: 800px;<br/>
+            margin: 0 auto;<br/>
+            padding: 15px;<br/>
+            background-color: #e1f4ff;<br/>
+            border-radius: 10px;<br/>
+          }<br/>
+          /*# sourceMappingURL=style.css.map */<br/></p>
+    </div>
+    <div class="code">
+        <h2>Javascript/jQuery</h2>
+        <p>$(&#x27;.modal_close&#x27;).on(&#x27;click&#x27;, function(){<br/>
+                $(&#x27;.modal_content&#x27;).hide();<br/>
+                $(&#x27;.modal_close&#x27;).hide();<br/>
+                $(&#x27;.modal_open&#x27;).show();<br/>
+                $(&#x27;body:not(.modal)&#x27;).css(&#x22;background-color&#x22;, &#x22;white&#x22;).css(&#x22;opacity&#x22;, &#x22;1&#x22;);<br/>
+            });<br/>
+            <br/>
+            $(&#x27;.modal_open&#x27;).on(&#x27;click&#x27;, function(){<br/>
+                $(&#x27;.modal_content&#x27;).show();<br/>
+                $(&#x27;.modal_close&#x27;).show();<br/>
+                $(&#x27;.modal_open&#x27;).hide();<br/>
+                $(&#x27;body&#x27;).css(&#x22;background-color&#x22;, &#x22;darkgrey&#x22;).css(&#x22;opacity&#x22;, &#x22;0.8&#x22;);<br/>
+                $(&#x22;.modal-content&#x22;).css(&#x22;opacity&#x22;, &#x22;1&#x22;);<br/>
+            });<br/>
+            $(function() {<br/>
+                $(&#x22;.modal_content&#x22;).dialog({<br/>
+                    modal: true,<br/>
+                    draggable: false,<br/>
+                    resizable: false,<br/>
+                    buttons: {<br/>
+                        Ok: function() {<br/>
+                            $( this ).dialog( &#x22;close&#x22; );<br/>
+                        }<br/>
+                    }<br/>
+                });<br/>
+            });<br/>
+            </p>
+    </div>
+<script src="javascript.js"></script>
+</body>
+</html>
